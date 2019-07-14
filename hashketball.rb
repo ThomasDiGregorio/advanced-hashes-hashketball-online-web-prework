@@ -230,7 +230,7 @@ def output_msg(player)
   puts "#{player.name}, has shoe size: #{player.shoe_size}, and #{player.rebounds} rebounds"
 end
 
-game = Game.new(GAME_HASH)
+game = game.new(game_hash)
 players = game.all_players
 biggest_shoe = players.max { |a, b| a.shoe_size <=> b.shoe_size }
 output_msg(biggest_shoe)
